@@ -1,0 +1,142 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+nav{
+    background: #252121fa;
+    height: 80px;
+    width: 100%;
+    margin: auto;
+}
+.logo{
+    font-size: 35px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 70px;
+    padding-left: 20px;
+    color: aqua;
+    font-weight: 700;
+}
+a{
+    text-decoration: none;
+}
+lable.logo{
+    color: rgb(54, 199, 194);
+    padding: 0 10px;
+}
+nav{
+    position: fixed;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+    
+}
+nav ul li{
+    display: inline-block;
+    color: azure;
+    line-height: 70px;
+    margin: 0 5px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+nav ul li a{
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    color: #45aeff;
+}
+a.active, a:hover{
+    background: #a61cd4f6;
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: rgb(40, 248, 234);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;display: none;
+}
+#check{
+    display: none;
+}
+@media (max-width: 952px){
+    lable.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+@media (max-width:758px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        background-color: #080808eb;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover, a.active{
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+
+section>div{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 10px;
+    padding-left: 30px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    margin: 10px 30px;
+    border-radius: 8px;
+}
+section>div>div img{
+    width: 100px;
+    border: none;
+}
+section>div>div+div{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.clr1{
+    color: rgb(93, 169, 30);
+}
+.clr2{
+    color: rgb(178, 71, 67)
+}
+.clr3{
+    color: rgb(158, 112, 56);
+}
+.clr4{
+    color: rgb(108, 49, 113);
+}
+.clr5{
+    color: rgb(64, 132, 220);
+}
+@media all and (max-width: 700px) and (min-width: 10px){
+    section>div{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
